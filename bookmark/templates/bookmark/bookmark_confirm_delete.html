@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}북마크 삭제{% endblock %}
+{% block content %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="alert alert-danger" role="alert">
+            <h3 class="alert-heading">한번 삭제하면 복구가 불가합니다.</h3>
+            <hr>
+            <p><b>"{{ object.site_name }}"</b>를 정말 삭제 하시겠습니까?</p>
+            <button type="submit" class="btn btn-danger">삭제 확인</button>
+            <a href="{% url 'list' %}" class="btn btn-info">돌아가기</a>
+        </div>
+    </form>
+
+
+{% endblock %}

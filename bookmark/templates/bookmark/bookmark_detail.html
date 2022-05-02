@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}북마크 상세 정보{% endblock %}
+{% block content %}
+
+    <h1>사이트 자세히 보기</h1>
+    <p>사이트명 : <b><a href="{{ object.url }}" target="_blank">{{ object.site_name }}</a></b></p>
+    <p>사이트 주소 : {{ object.url }}</p>
+    <a href="{% url 'list' %}" class="btn btn-secondary">목록으로</a>
+
+{% endblock %}

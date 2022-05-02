@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}북마크 수정{% endblock %}
+{% block content %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary">수정</button>
+    </form>
+
+{% endblock %}
